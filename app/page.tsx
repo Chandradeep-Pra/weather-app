@@ -1,6 +1,15 @@
 import Temperature from "@/components/Temperature/Temperature";
 import Navbar from "../components/Navbar";
 import AirPollution from "@/components/AirPollution/AirPollution";
+import Sunset from "@/components/Sunset/Sunset";
+import Wind from "@/components/Wind/Wind";
+import DailyWeather from "@/components/DailyWeather/DailyWeather";
+import UV from "@/components/UV/UV";
+import Poppulation from "@/components/Population/Poppulation";
+import FeelsLike from "@/components/FeelsLike/FeelsLike";
+import Humidity from "@/components/Humidity/Humidity";
+import Visibility from "@/components/Visibility/Visibility";
+import Pressure from "@/components/Pressure/Pressure";
 
 export default function Home() {
   return (
@@ -14,6 +23,15 @@ export default function Home() {
           <div className="instruments grid h-full gap-4 col-span-full sm-2:col-span-2 lg:grid-cols-3 xl-grid-cols-4">
           <AirPollution />
           {/* <AirPollution /> */}
+          <Sunset />
+          <Wind />
+          <DailyWeather />
+          <UV />
+          <Poppulation />
+          <FeelsLike />
+          <Humidity />
+          <Visibility />
+          <Pressure />
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@ import React from "react";
 import { Skeleton } from "../ui/skeleton";
 import { ThermometerSun } from "lucide-react";
 import { Progress } from "../ui/progress";
-import { airQualityRating, airQualityRatings } from "@/utils/misc";
+import {  airQualityRatings } from "@/utils/misc";
 
 const AirPollution = () => {
   const { airData } = useGlobalContext();
@@ -27,7 +27,7 @@ const AirPollution = () => {
     return item.rating === aqi
 })
   return (
-    <div className="air-pollution col-span-full sm-2:col-span-2 pt-6 px-4 h-[12rem] border rounded-xl flex flex-col gap-4 dark:bg-[#0A0A0A] shadow-sm dark:shadow-none">
+    <div className="air-pollution col-span-full sm-2:col-span-2 md:col-span-2 xl:col-span-2 pt-6 px-4 h-[12rem] border rounded-xl flex flex-col gap-4 dark:bg-[#0A0A0A] shadow-sm dark:shadow-none ">
       <h2 className="flex items-center gap-2 font-medium">
         {" "}
         <ThermometerSun size={15} /> Air Pollution{" "}
