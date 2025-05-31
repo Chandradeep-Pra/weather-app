@@ -7,6 +7,10 @@
   --background: #0b011c;
   --foreground: #f1ecec;
 } */
+@theme{
+  --breakpoint-sm-2: "581px";
+  --breakpoint-md-2: "1100px";
+}
 
 @theme inline {
   --color-background: var(--background);
@@ -47,6 +51,7 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 }
+
 
 :root {
   --radius: 0.625rem;
@@ -124,4 +129,12 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.progress{
+  background: linear-gradient(to right, var(--color-chart-1), var(--color-chart-2), var(--color-chart-3), var(--color-chart-4), var(--color-chart-5));
+}
+
+.temperature {
+  background-image: linear-gradient(to right, #00dfff 0%, #00f9ff 20%, yellow);
 }
