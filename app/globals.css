@@ -134,3 +134,7 @@
 .progress{
   background: linear-gradient(to right, var(--color-chart-1), var(--color-chart-2), var(--color-chart-3), var(--color-chart-4), var(--color-chart-5));
 }
+
+.temperature {
+  background-image: linear-gradient(to right, #00dfff 0%, #00f9ff 20%, yellow);
+}

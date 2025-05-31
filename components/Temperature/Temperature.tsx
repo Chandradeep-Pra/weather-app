@@ -43,7 +43,8 @@ const Temperature = () => {
   const temp = kelToCel(main?.temp);
   const minTemp = kelToCel(main?.temp_min);
   const maxTemp = kelToCel(main?.temp_max);
-  const feelsLike = kelToCel(main?.feels_like);
+  // console.log(main)
+  // const feelsLike = kelToCel(main?.feels_like);
 
   const { main: weatherMain, description } = weather[0] || {};
 
@@ -74,6 +75,7 @@ const Temperature = () => {
         </span>
       </p>
       <p className="text-9xl font-bold py-10 text-center">{temp}&deg;</p>
+      <span>Feels like : {kelToCel(main?.feels_like)}</span>
       <div>
         <div>
           <span>{getWIcon()}</span>

@@ -19,7 +19,7 @@ const Poppulation = () => {
         <h2 className="flex items-center gap-2 font-medium">
           {<Users size={15} />} Population
         </h2>
-        <p className="pt-4 text-2xl">{formatNumber(city.population)}</p>
+        <p className="pt-4 text-2xl">{formatNumber(city.population) === 0 ? "No data" :formatNumber(city.population) }</p>
       </div>
       <p className="text-sm">Latest UN population data for {city.name}.</p>
     </div>
