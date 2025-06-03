@@ -2,6 +2,8 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+@custom-variant immersive (&:is(.immersive *));
+
 
 /* html.dark {
   --background: #0b011c;
@@ -129,7 +131,29 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  
 }
+
+html.immersive {
+  /* --background: oklch(0.4 0.2 180);
+  --foreground: oklch(0.15 0.6 290);
+  --card: oklch(0.7 0.2 250);
+  --card-foreground: oklch(0.1 0.8 280);
+  --primary: oklch(0.35 0.7 260);
+  --primary-foreground: oklch(0.95 0 0);
+  --secondary: oklch(0.6 0.4 240);
+  --secondary-foreground: oklch(0.15 0.7 290);
+  --muted: oklch(0.7 0.3 260);
+  --muted-foreground: oklch(0.3 0.6 270);
+  --accent: oklch(0.8 0.5 270);
+  --accent-foreground: oklch(0.2 0.9 290);
+  --border: oklch(0.6 0.1 240);
+  --input: oklch(0.6 0.1 240);
+  --ring: oklch(0.7 0.2 250); */
+  /* etc */
+}
+
 
 .progress{
   background: linear-gradient(to right, var(--color-chart-1), var(--color-chart-2), var(--color-chart-3), var(--color-chart-4), var(--color-chart-5));
@@ -137,4 +161,19 @@
 
 .temperature {
   background-image: linear-gradient(to right, #00dfff 0%, #00f9ff 20%, yellow);
+}
+
+
+/* Dock Animation */
+@keyframes subtle-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+.hover-subtle-pulse:hover {
+  animation: subtle-pulse 0.6s ease-in-out;
 }

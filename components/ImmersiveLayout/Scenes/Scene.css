@@ -1,0 +1,95 @@
+.cloud-container {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  /* background: linear-gradient(to bottom, #bce0fd 0%, #e4f1fb 100%); */
+}
+
+.cloud {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0.7;
+  filter: blur(4px);
+  animation: floatClouds linear infinite;
+}
+
+.cloud-1 {
+  width: 200px;
+  height: 60px;
+  top: 20%;
+  left: -20%;
+  animation-duration: 60s;
+  animation-delay: 0s;
+  
+}
+
+.cloud-2 {
+  width: 150px;
+  height: 50px;
+  top: 40%;
+  left: -25%;
+  animation-duration: 90s;
+  animation-delay: 15s;
+}
+
+.cloud-3 {
+  width: 180px;
+  height: 55px;
+  top: 60%;
+  left: -30%;
+  animation-duration: 75s;
+  animation-delay: 5s;
+}
+
+@keyframes floatClouds {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(150vw);
+  }
+}
+
+/* Wind Effect */
+.wind-line {
+  position: absolute;
+  width: 80px;
+  height: 2px;
+  background: rgba(62, 133, 159, 0.2);
+  border-radius: 999px;
+  animation: windMove 3s linear infinite;
+  opacity: 0.7;
+}
+
+.wind-0 {
+  animation-duration: 3s;
+}
+
+.wind-1 {
+  animation-duration: 4s;
+}
+
+.wind-2 {
+  animation-duration: 2.5s;
+}
+
+.wind-3 {
+  animation-duration: 3.5s;
+}
+
+@keyframes windMove {
+  0% {
+    transform: translateX(-100px) translateY(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(200px) translateY(-10px);
+    opacity: 0;
+  }
+}
+
